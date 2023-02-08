@@ -33,7 +33,7 @@ export const Create = () => {
 
         console.log(dataImg.data)
 
-        if (dataImg.status == 'succes') {
+        if (dataImg.data.status == 'succes') {
           setResult('Post Saved!')
         } else {
           setResult("There's been an error")
