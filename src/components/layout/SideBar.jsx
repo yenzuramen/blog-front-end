@@ -1,6 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export const SideBar = () => {
+
+  const [search, setSearch] = useState('')
+  const navigator = useNavigate()
+
+  const makeSearch = (e) => {
+    e.preventDefault();
+    console.log(e.target.search_field.value)
+    let userSearch = e.target.search_field.value;
+
+    navigator('/search/' + userSearch, { replace: true })
+  }
+
+
+
   return (
     <aside className="lateral">
       {/* BUSCADOR */}
@@ -9,9 +24,9 @@ export const SideBar = () => {
         <h3 className="title">Buscador</h3>
         {/* {(notFound && search.length > 1) && (<span className='no-encontrado'> Not movies found </span>)} */}
 
-        <form>
+        <form onSubmit={makeSearch}>
           <input type="text" id="search_field" name='search_field' autoComplete='off' />
-          <button id="search">Buscar</button>
+          <input type='submit' id="search" value='Search' />
         </form>
       </div>
 
