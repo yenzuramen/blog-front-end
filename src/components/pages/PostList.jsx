@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import reactlogo from '../../assets/react-logo.png'
 import { AjaxRequest } from '../../helpers/AjaxRequest'
 import { Global } from '../../helpers/Global'
@@ -32,11 +33,11 @@ export const PostList = ({ posts, setPosts }) => {
 
           </div>
           <div className='data-cont'>
-            <h3 className="title">{post.title}</h3>
+            <h3 className="title"><Link to={'/post/' + post._id}>{post.title}</Link></h3>
             <p className="description">{post.content}</p>
             {/* <pre>{JSON.stringify(posts)}</pre> */}
             <div className='btns'>
-              <button className="edit">Editar</button>
+              <Link className="edit" to={'/edit-post/' + post._id}>Editar</Link>
               <button className="delete" onClick={() => { deletePost(post._id) }}>Borrar</button>
             </div>
 
