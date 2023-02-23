@@ -52,7 +52,7 @@ export const Create = () => {
     <div className='jumbo' onSubmit={savePost}>
       <h2>Create Post</h2>
       <p>Post something</p>
-      <pre>{JSON.stringify(form)}</pre>
+      {/* <pre>{JSON.stringify(form)}</pre> */}
       <strong>{result}</strong>
       <form className='form'>
         <div className='form-group'>

@@ -7,11 +7,10 @@ export const NavMenu = () => {
     <nav className="nav">
       <ul>
         <li>
-          <NavLink to='/home'>Inicio</NavLink>
+          <NavLink to='/home'>Home</NavLink>
           {/* <a href="/#">Inicio</a> */}</li>
         <li>   <NavLink to='/posts'>Posts</NavLink></li>
         <li>   <NavLink to='/create'>Create</NavLink></li>
-        <li><a href="/#">Contacto</a></li>
       </ul>
     </nav>
   )

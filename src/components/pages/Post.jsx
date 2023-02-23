@@ -20,10 +20,10 @@ export const Post = () => {
     //Llama al helper para hacer la peticion
     let { data, loading } = await AjaxRequest(url, 'GET')
 
-    console.log(data)
+    // console.log(data)
 
     if (data.status === 'succes') {
-      console.log(data.post.length)
+      // console.log(data.post.length)
       setPost(data.post)
     } else {
       setPost(null)
@@ -35,11 +35,11 @@ export const Post = () => {
   return (
     <>
       {loading ? ("Loading...") : (post !== null ? (
-        <div className='jumbo'>
+        <div className='jumbo-post'>
           <h1>{post.title}</h1>
           <span>{post.date}</span>
           <p>{post.content}</p>
-          <div className='mask'>
+          <div className='mask-post'>
             {post.image == 'default.png' ? (<img src={reactlogo} alt='React logo' />) :
               (<img src={Global.url + 'image/' + post.image} alt='React logo' />)}
 

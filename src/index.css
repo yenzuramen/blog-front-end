@@ -124,22 +124,29 @@ body {
 }
 
 .mask {
-    width: 40%;
+    width: 300px;
     overflow: hidden;
     border-radius: 15px;
+    height: 200px;
+    overflow: hidden;
 }
 
 .mask img {
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
 }
 
 .data-cont {
     margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .btns {
     display: flex;
+    justify-content: center;
 }
 
 .jumbo {
@@ -149,6 +156,21 @@ body {
     margin: 2% auto;
     padding: 4%;
     width: 70%;
+
+}
+
+
+.jumbo {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #ddd;
+    margin: 2% auto;
+    padding: 4%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .jumbo h1 {
@@ -286,4 +308,28 @@ textarea {
 .form-group .mask {
     width: 30%;
     overflow: hidden;
+}
+
+.title a {
+    text-decoration: none;
+    color: #172761;
+    text-transform: uppercase;
+    background-color: #d1defa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.description {
+    padding: 20px;
+}
+
+.mask-post {
+    border-radius: 10px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.mask-post img {
+    height: 100%;
+    width: 100%;
 }

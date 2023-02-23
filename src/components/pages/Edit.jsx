@@ -36,11 +36,18 @@ export const Edit = () => {
 
     e.preventDefault()
     let newPost = form
-    console.log(newPost)
+
+    if (!newPost.content) {
+      newPost.content = post.content
+    }
+
+    if (!newPost.title) {
+      newPost.title = post.title
+    }
+
 
     //Ajax request to save on backend
     let { data } = await AjaxRequest(Global.url + 'post/' + params.id, 'PUT', newPost)
-    console.log(data)
 
     if (data.status == 'succes') {
       setResult('Post Saved!')
@@ -51,6 +58,7 @@ export const Edit = () => {
       if (fileInput.files.length !== 0) { //Si hay imagenes para guardar
         const formData = new FormData();
         formData.append('file0', fileInput.files[0])
+
 
         let dataImg = await AjaxRequest(Global.url + 'upload-img/' + params.id,
           'POST', formData, true)
@@ -76,7 +84,7 @@ export const Edit = () => {
     <div className='jumbo' onSubmit={EditPost}>
       <h2>Edit Post: {post.title}</h2>
       <p>Edit your post</p>
-      <pre>{JSON.stringify(form)}</pre>
+      {/* <pre>{JSON.stringify(form)}</pre> */}
       <strong>{result}</strong>
       <form className='form'>
         <div className='form-group'>

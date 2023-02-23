@@ -37,8 +37,8 @@ export const PostList = ({ posts, setPosts }) => {
             <p className="description">{post.content}</p>
             {/* <pre>{JSON.stringify(posts)}</pre> */}
             <div className='btns'>
-              <Link className="edit" to={'/edit-post/' + post._id}>Editar</Link>
-              <button className="delete" onClick={() => { deletePost(post._id) }}>Borrar</button>
+              <Link className="edit" to={'/edit-post/' + post._id}>Edit</Link>
+              <button className="delete" onClick={() => { deletePost(post._id) }}>Delete</button>
             </div>
 
           </div>

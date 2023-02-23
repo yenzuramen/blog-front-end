@@ -6,7 +6,7 @@ export const Header = () => {
     <header className="header">
     
 
-      <h1>A Blog</h1>
+      <h1>A Blog Made With MERN</h1>
     </header>
   )
 }

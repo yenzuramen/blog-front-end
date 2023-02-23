@@ -21,7 +21,7 @@ export const SideBar = () => {
       {/* BUSCADOR */}
 
       <div className="search">
-        <h3 className="title">Buscador</h3>
+        <h3 className="title">Search a Post</h3>
         {/* {(notFound && search.length > 1) && (<span className='no-encontrado'> Not movies found </span>)} */}
 
         <form onSubmit={makeSearch}>
